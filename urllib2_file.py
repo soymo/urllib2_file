@@ -173,7 +173,7 @@ def send_data(v_vars, v_files, boundary, sock=None):
             filename = filename.encode('UTF-8')
         buffer = ''
         buffer += '--%s\r\n' % boundary
-        buffer += 'Content-Disposition: form-data; name="%s"; filename="%s";\r\n' \
+        buffer += 'Content-Disposition: form-data; name="%s"; filename="%s"\r\n' \
                   % (name, filename)
         buffer += 'Content-Type: %s\r\n' % get_content_type(filename)
         buffer += 'Content-Length: %s\r\n' % file_size
